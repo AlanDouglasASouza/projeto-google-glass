@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/form.css">
+    </head>
+<body>    
+<div id="interface">
+<header id="cabecalho">
+<hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+</hgroup>
+
+<img id="icone" src="_imagens/contato.png">
+
+<nav id="menu">
+<h1>Menu Principal</h1>
+<ul type="disc">
+<li><a href="index.html" onmousemove="chamaFoto('_imagens/home.png')" onmouseout="chamaFoto('_imagens/contato.png')">Home</a></li>
+<li><a href="specs.html" onmousemove="chamaFoto('_imagens/especificacoes.png')" onmouseout="chamaFoto('_imagens/contato.png')">Especificações</a></li>
+<li><a href="fotos.html" onmousemove="chamaFoto('_imagens/fotos.png')" onmouseout="chamaFoto('_imagens/contato.png')">Fotos</a></li>
+<li><a href="multimidia.html" onmousemove="chamaFoto('_imagens/multimidia.png')" onmouseout="chamaFoto('_imagens/contato.png')">Multimídia</a></li>
+<li><a href="fale-conosco.html" onmousemove="chamaFoto('_imagens/contato.png')" onmouseout="chamaFoto('_imagens/contato.png')">Fale conosco</a></li>
+</ul>
+</nav>
+</header>
+
+<section>
+    <article id="principal">
+        <header id="cab-art">
+    <hgroup>
+    <h2>Fale Conosco > Contato</h2>
+    <h1>Formulário de Contato</h1>
+    <h2>por Gustavo Guanabara</h2>
+    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+    </hgroup>
+    </header>
+
+    <form method="POST" id="cContato" action="mailto:alan.douglas.ads@gmail.com" oninput="calc();">
+        <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+    <p><label for="cNome">Nome:</label> <input type="text" name="nNome" id="cNome" size="20" maxlength="40" placeholder="Nome Completo"></p>
+    <p><label for="cSenha">Senha:</label> <input type="password" name="nSenha" id="cSenha" size="20" maxlength="8" placeholder="Digite sua senha"> </p>
+    <p><label for="cEmail">E-mail:</label> <input type="email" name="nEmail" id="cEmail" size="20" maxlength="50" placeholder="Digite seu E-mail"> </p>
+        <fieldset id="sexo"><legend>Sexo</legend>
+         <input type="radio" name="tsex" id="masc"><label for="masc">Masculino</label></br>
+         <input type="radio" name="tsex" id="fem"><label for="fem">Feminino</label>
+    </fieldset>
+    <p><label for="cData">Data de Nascimento:</label> <input type="date" name="nData" id="cData"> </p>
+</fieldset>
+
+<fieldset id="endereco"><legend>Endereço do Usuário</legend> 
+    <p><label for="cRua">Logradouro:</label> <input type="text" name="nRua" id="cRua" size="20" placeholder="Rua, Av, Travessa..."></p>
+    <p><label for="cNum">Número:</label> <input type="number" name="nNum" id="cNum" size="5" placeholder="N°" min="0" max="99999"></p>
+    <p><label for="cEst">Estado:</label> <select name="nEst" id="cEst">
+        <optgroup label="Região Suldeste">
+            <option value="SP" selected>São Paulo</option>
+            <option>Rio de Janeiro</option>
+            <option>Minas Gerais</option>
+        </optgroup>
+        <optgroup label="Região Sul">
+            <option>Paraná</option>
+            <option>Curitiba</option>
+            <option value="RS">Rio Grande do Sul</option>
+        </optgroup>
+    </select> </p>
+    <p><label for="cCid">Cidade:</label> <input type="text" name="nCid" id="cCid" size="20" placeholder="Sua cidade" list="cidades">
+    <datalist id="cidades">
+        <option value="Rio de Janeiro"></option>
+        <option value="Belfor Roxo"></option>
+        <option value="Nova Iguaçu"></option>
+        <option value="Niterói"></option>
+    </datalist></p>
+</fieldset>
+
+<fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+    <p><label for="cGra">Grau de Urgência:</label> <input type="range" name="nGra" id="cGra" min="0" max="10" step="2"></p>
+    <p><label>Mensagem:</label> <textarea name="nMen" id="cMen" cols="35" rows="5" placeholder="Escreva aqui sua mensagem"></textarea></p>
+</fieldset>
+
+<fieldset id="pedido"><legend> Quero um Google Glass</legend>
+    <p><label for="cGos"> <input type="checkbox" name="nGos" id="cGos" checked> Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p>Cor: <input type="color" name="nCor" id="cCor"> <label for="cCor"></label></p>
+    <p><label for="cQuan">Quantidade: <input type="number" name="nQuan" id="cQuan" min="0" max="20" size="3"> </label></p>
+    <p><label for="cPre">Preço Total: R$</label> <input type="text" name="nPre" id="cPre" size="8" placeholder="Valor a pagar" readonly></p>
+</fieldset>
+
+    <input type="image" src="_imagens/botao-enviar.png" alt="Botão de envio">
+
+        </form>
+    </article>
+</section>
+
+<footer id="rodape">
+    <p>Copyright 2013 - by Gustavo Guanabara</br>
+    <a href="http:www.facebook.com/cursosemvideo" target="blank">Facebook</a> | 
+    <a href="http:www.twitter.com/cursosemvideo" target="blank">Twitter</a></p>
+    </footer>
+    </div>
+    <script src="_javascript/funcoes.js"></script>
+    <script>
+        
+        function calc() {
+            let qnt = Number(document.getElementById('cQuan').value);     
+            let tot = qnt * 1500;
+            document.getElementById('cPre').value = tot;
+        }
+
+    </script>
+    </body>
+    </html>
